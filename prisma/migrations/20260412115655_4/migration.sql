@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Item" ALTER COLUMN "ogPrice" DROP NOT NULL,
+ALTER COLUMN "resellerPrice" DROP NOT NULL;
