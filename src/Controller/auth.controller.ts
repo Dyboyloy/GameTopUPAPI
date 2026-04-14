@@ -67,7 +67,7 @@ export const register = async (req: Request, res: Response, next: NextFunction) 
             });
         }
 
-        (req.session as any).user = { id: user.id, username: user.username };
+        (req.session as any).user = { id: user.id, username: user.username, role: user.role };
 
         res.status(201).json({ message: "User registered successfullly"}); 
     } catch (error) {
@@ -99,7 +99,7 @@ export const login = async (req: Request, res: Response, next: NextFunction) => 
 
 
         // set session
-        (req.session as any).user = { id: user.id, username: user.username };
+        (req.session as any).user = { id: user.id, username: user.username, role: user.role };
 
         res.status(200).json({ message: "Login successful" });
     }

@@ -1,4 +1,3 @@
-import { prisma } from '@/Lib/PrismaClient';
 import { NextFunction, Request, Response } from 'express';
 
 export const adminProtect = async (req: Request, res: Response, next: NextFunction) => {
